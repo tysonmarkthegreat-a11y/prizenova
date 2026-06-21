@@ -21,14 +21,15 @@
 <!-- ============ CASH OUT ALERT BAR ============ -->
 <div id="cashout-alert-bar" class="fixed top-0 inset-x-0 z-50 flex justify-center px-3 pt-2 sm:pt-3 pointer-events-none" style="z-index: 60;">
   <div id="cashout-alert-pill"
-       class="cashout-pill pointer-events-auto flex items-center gap-2 sm:gap-3 max-w-[94vw] sm:max-w-xl bg-voidDeep/95 border-2 border-hotyellow rounded-full px-4 sm:px-6 py-2.5 sm:py-3 shadow-lg">
+       class="cashout-pill pointer-events-auto flex items-center gap-2 sm:gap-3 w-full max-w-[92vw] sm:max-w-2xl bg-voidDeep/95 border-2 border-hotyellow rounded-2xl px-4 sm:px-6 py-2.5 sm:py-3 shadow-lg">
     <span class="text-base sm:text-lg shrink-0" aria-hidden="true">🔥</span>
-    <p id="cashout-alert-text" class="text-xs sm:text-sm font-semibold text-white leading-snug truncate">
+    <p id="cashout-alert-text" class="text-xs sm:text-sm font-semibold text-white leading-snug">
       Cash Out Alert
     </p>
     <span class="text-base sm:text-lg shrink-0" aria-hidden="true">💸</span>
   </div>
 </div>
+
 
 <!-- ============ NAV ============ -->
 <header id="site-header" class="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-void/80 border-b border-gold/20">
@@ -605,9 +606,8 @@
     var emoji = randItem(emojis);
     // Framed as a sample/example notification, not an assertion that this
     // specific named individual actually cashed out this specific amount.
-    return emoji + " CASH OUT EXAMPLE: a player on " + game +
-           " hit a $" + amount + " cash out — players like " + name +
-           " are winning right now!";
+    return emoji + " EXAMPLE: " + name + " — $" + amount +
+           " cash out on " + game + "!";
   }
 
   var pill = document.getElementById("cashout-alert-pill");
@@ -651,4 +651,3 @@
 
 </body>
 </html>
-
