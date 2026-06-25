@@ -71,7 +71,8 @@ document.addEventListener('DOMContentLoaded', function () {
 <!-- ══════════════════════════════════════════
      CASH OUT ALERT BAR
 ══════════════════════════════════════════ -->
-<div id="alertBar" class="fixed top-0 inset-x-0 flex justify-center px-3 pt-2 sm:pt-3 pointer-events-none" style="z-index:70;">
+<div id="alertBar" class="fixed inset-x-0 flex justify-center px-3 pt-2 sm:pt-3 pointer-events-none" style="z-index:70; top:64px;">
+  <style>@media(min-width:640px){#alertBar{top:80px;}}</style>
   <div id="alertPill"
        class="alert-pill pointer-events-auto flex items-center gap-2 sm:gap-3 w-full max-w-[92vw] sm:max-w-2xl bg-voidDeep/95 border-2 border-hotgold rounded-2xl px-4 sm:px-6 py-2.5 sm:py-3">
     <span id="alertEmoji" class="text-base sm:text-lg shrink-0" aria-hidden="true">🔥</span>
@@ -83,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function () {
 <!-- ══════════════════════════════════════════
      NAV
 ══════════════════════════════════════════ -->
-<header class="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-void/85 border-b border-gold/20">
+<header class="fixed top-0 inset-x-0 backdrop-blur-md bg-void/85 border-b border-gold/20" style="z-index:80;">
   <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 h-16 sm:h-20 flex items-center justify-between">
     <a href="#top" class="flex items-center gap-1">
       <span class="text-2xl sm:text-3xl font-display tracking-wide text-gold text-glow">PRIZE</span>
@@ -768,6 +769,52 @@ document.addEventListener('DOMContentLoaded', function () {
   var prefersReducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   if (prefersReducedMotion) { pill.style.transition = "none"; }
 
+  /* ── Web Audio chime — no external file needed ── */
+  var audioCtx = null;
+  function getCtx() {
+    if (!audioCtx) {
+      try { audioCtx = new (window.AudioContext || window.webkitAudioContext)(); } catch(e) {}
+    }
+    return audioCtx;
+  }
+
+  function playChime(isVip) {
+    var ctx = getCtx();
+    if (!ctx) return;
+    // Resume context (browsers require a user gesture first;
+    // after any click the context will be running)
+    if (ctx.state === 'suspended') { ctx.resume(); }
+
+    var now = ctx.currentTime;
+
+    if (isVip) {
+      // VIP: deep rich two-tone gong — lower, longer sustain
+      playTone(ctx, 'sine',    440, 0.00, 0.55, now);   // A4 — warm base
+      playTone(ctx, 'sine',    880, 0.05, 0.40, now);   // A5 — bright overtone
+      playTone(ctx, 'sine',    659, 0.12, 0.30, now);   // E5 — chord fill
+      playTone(ctx, 'triangle',220, 0.00, 0.20, now);   // A3 — deep sub thump
+    } else {
+      // Standard: bright clean two-tone ping
+      playTone(ctx, 'sine', 1046, 0.00, 0.25, now);    // C6 — crisp high ping
+      playTone(ctx, 'sine',  784, 0.12, 0.20, now);    // G5 — warm follow
+    }
+  }
+
+  function playTone(ctx, type, freq, delay, duration, now) {
+    var osc  = ctx.createOscillator();
+    var gain = ctx.createGain();
+    osc.connect(gain);
+    gain.connect(ctx.destination);
+    osc.type      = type;
+    osc.frequency.setValueAtTime(freq, now + delay);
+    // Quick attack, natural exponential decay
+    gain.gain.setValueAtTime(0, now + delay);
+    gain.gain.linearRampToValueAtTime(0.18, now + delay + 0.015);
+    gain.gain.exponentialRampToValueAtTime(0.0001, now + delay + duration);
+    osc.start(now + delay);
+    osc.stop(now  + delay + duration + 0.05);
+  }
+
   var HOLD = 4500, MIN_GAP = 4000, MAX_GAP = 8000;
   function gap() { return MIN_GAP + Math.random() * (MAX_GAP - MIN_GAP); }
 
@@ -782,6 +829,7 @@ document.addEventListener('DOMContentLoaded', function () {
       pill.style.borderColor = "";
     }
     pill.classList.add("is-visible");
+    playChime(msg.isVip);
     setTimeout(function () {
       pill.classList.remove("is-visible");
       setTimeout(showAlert, gap());
