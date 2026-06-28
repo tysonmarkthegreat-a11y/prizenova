@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function () {
   </div>
 </header>
 
-<main id="top" class="pt-16 sm:pt-20">
+<main id="top" class="pt-28 sm:pt-32">
 
 <!-- ══════════════════════════════════════════
      HERO
@@ -763,19 +763,20 @@ document.addEventListener('DOMContentLoaded', function () {
      FLASHING LIVE CHAT BANNER (top of page)
 ══════════════════════════════════════════ -->
 <style>
-  /* Flashing yellow banner */
   @keyframes bannerFlash {
-    0%,100% { background: #ffcc00; box-shadow: 0 0 0px rgba(255,204,0,0); }
-    50%      { background: #fff000; box-shadow: 0 0 18px 4px rgba(255,240,0,.6); }
+    0%,100% { background: #ffcc00; }
+    50%      { background: #fff000; box-shadow: 0 0 14px 3px rgba(255,240,0,.5); }
   }
   #liveChatBanner {
     animation: bannerFlash 1.4s ease-in-out infinite;
+    height: 36px;
+    line-height: 36px;
   }
-  #liveChatBanner:hover { animation-play-state: paused; filter: brightness(1.08); }
+  @media(min-width:640px){ #liveChatBanner { height: 40px; line-height: 40px; } }
 
   /* Hovering live chat widget */
   #liveChatWidget {
-    transition: transform .3s ease, opacity .3s ease, box-shadow .3s ease;
+    transition: transform .3s ease, opacity .3s ease;
     transform: translateY(16px);
     opacity: 0;
     pointer-events: none;
@@ -786,7 +787,6 @@ document.addEventListener('DOMContentLoaded', function () {
     pointer-events: auto;
   }
 
-  /* Pulse ring on the live chat icon button */
   @keyframes chatPing {
     0%       { transform: scale(1);   opacity: .6; }
     75%,100% { transform: scale(2.2); opacity: 0;  }
@@ -794,26 +794,17 @@ document.addEventListener('DOMContentLoaded', function () {
   .chat-ping { animation: chatPing 1.8s cubic-bezier(0,0,.2,1) infinite; }
 </style>
 
-<!-- Flashing banner — fixed below nav -->
+<!-- Flashing banner — slim fixed bar below nav, NO bouncing SVGs -->
 <div id="liveChatBanner"
-     class="fixed inset-x-0 flex items-center justify-center gap-2 sm:gap-3 px-4 py-2 sm:py-2.5 cursor-pointer select-none"
+     class="fixed inset-x-0 flex items-center justify-center gap-2 px-4 cursor-pointer select-none overflow-hidden"
      style="top:64px; z-index:75;"
      onclick="toggleLiveChat()"
      role="button"
      aria-label="Open live chat">
   <style>@media(min-width:640px){#liveChatBanner{top:80px;}}</style>
-  <!-- Arrow icon inline SVG -->
-  <svg viewBox="0 0 24 24" fill="#1a0033" class="w-4 h-4 sm:w-5 sm:h-5 shrink-0 animate-bounce" aria-hidden="true">
-    <polyline points="6,9 12,15 18,9" stroke="#1a0033" stroke-width="2.5" stroke-linecap="round" fill="none"/>
-  </svg>
-  <p class="text-void font-extrabold text-xs sm:text-sm tracking-wide text-center leading-tight">
-    ⚠️ Having issue messaging on Facebook? &nbsp;
-    <span class="underline underline-offset-2">Chat live on our website</span>
-    &nbsp;→
+  <p class="text-void font-extrabold text-[11px] sm:text-sm tracking-wide text-center whitespace-nowrap overflow-hidden text-ellipsis">
+    ⚠️ Having issue messaging on Facebook? &nbsp;<span class="underline underline-offset-2">Chat live on our website</span>&nbsp; →
   </p>
-  <svg viewBox="0 0 24 24" fill="#1a0033" class="w-4 h-4 sm:w-5 sm:h-5 shrink-0 animate-bounce" aria-hidden="true">
-    <polyline points="6,9 12,15 18,9" stroke="#1a0033" stroke-width="2.5" stroke-linecap="round" fill="none"/>
-  </svg>
 </div>
 
 <!-- ══════════════════════════════════════════
