@@ -71,8 +71,8 @@ document.addEventListener('DOMContentLoaded', function () {
 <!-- ══════════════════════════════════════════
      CASH OUT ALERT BAR
 ══════════════════════════════════════════ -->
-<div id="alertBar" class="fixed inset-x-0 flex justify-center px-3 pt-2 sm:pt-3 pointer-events-none" style="z-index:70; top:64px;">
-  <style>@media(min-width:640px){#alertBar{top:80px;}}</style>
+<div id="alertBar" class="fixed inset-x-0 flex justify-center px-3 pt-1 pointer-events-none" style="z-index:70; top:104px;">
+  <style>@media(min-width:640px){#alertBar{top:124px;}}</style>
   <div id="alertPill"
        class="alert-pill pointer-events-auto flex items-center gap-2 sm:gap-3 w-full max-w-[92vw] sm:max-w-2xl bg-voidDeep/95 border-2 border-hotgold rounded-2xl px-4 sm:px-6 py-2.5 sm:py-3">
     <span id="alertEmoji" class="text-base sm:text-lg shrink-0" aria-hidden="true">🔥</span>
@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function () {
   </div>
 </header>
 
-<main id="top" class="pt-28 sm:pt-32">
+<main id="top" class="pt-36 sm:pt-40">
 
 <!-- ══════════════════════════════════════════
      HERO
@@ -771,6 +771,7 @@ document.addEventListener('DOMContentLoaded', function () {
     animation: bannerFlash 1.4s ease-in-out infinite;
     height: 36px;
     line-height: 36px;
+    box-shadow: 0 3px 12px rgba(0,0,0,.5);
   }
   @media(min-width:640px){ #liveChatBanner { height: 40px; line-height: 40px; } }
 
