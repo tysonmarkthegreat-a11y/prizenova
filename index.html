@@ -12,7 +12,1043 @@
 <!-- Inline SVG icon library — zero external dependency -->
 <script>
 var ICONS = {
-  bolt:       '<svg viewBox="0 0 24 24" fill="currentColor">
+  bolt:       '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 2L4.09 12.96A1 1 0 0 0 5 14.5h5.5L10 22l9.91-10.96A1 1 0 0 0 19 9.5H13.5L13 2z"/></svg>',
+  star:       '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>',
+  dice:       '<svg viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8" cy="8" r="1.5" fill="#1a0033"/><circle cx="16" cy="8" r="1.5" fill="#1a0033"/><circle cx="12" cy="12" r="1.5" fill="#1a0033"/><circle cx="8" cy="16" r="1.5" fill="#1a0033"/><circle cx="16" cy="16" r="1.5" fill="#1a0033"/></svg>',
+  vault:      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="12" cy="12" r="4"/><path d="M12 8v4l2 2"/><path d="M20 8h1M20 16h1"/></svg>',
+  cards:      '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 5H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 12H4V7h16v10z"/><path d="M6 9h2v2H6zm0 4h6v2H6zm8 0h4v2h-4zm0-4h4v2h-4z"/></svg>',
+  fire:       '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.5 5.5 7 9 10 12c-2.5-1-3-4-2-6C5 8 4 12 6 16c1.5 3 4.5 5 6 5s4.5-2 6-5c2-4 1-8-2-10-1 3-2 4-4 2 2-2 2-4 0-6z"/></svg>',
+  paw:        '<svg viewBox="0 0 24 24" fill="currentColor"><ellipse cx="6" cy="7" rx="2" ry="3"/><ellipse cx="18" cy="7" rx="2" ry="3"/><ellipse cx="10" cy="5" rx="2" ry="3"/><ellipse cx="14" cy="5" rx="2" ry="3"/><path d="M12 11c-4 0-7 2.5-7 6 0 2 2 4 7 4s7-2 7-4c0-3.5-3-6-7-6z"/></svg>',
+  road:       '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 17l4-10h10l4 10H3z"/><path d="M12 7v10M9 10h6"/></svg>',
+  bolt2:      '<svg viewBox="0 0 24 24" fill="currentColor"><polygon points="13,2 4,14 11,14 11,22 20,10 13,10"/></svg>',
+  crown:      '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 19h18l-3-9-4.5 4.5L12 8l-1.5 6.5L6 10l-3 9z"/><rect x="3" y="20" width="18" height="2" rx="1"/></svg>',
+  gamepad:    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="6" width="20" height="12" rx="5"/><path d="M7 10v4M5 12h4"/><circle cx="16" cy="11" r="1" fill="currentColor"/><circle cx="18" cy="13" r="1" fill="currentColor"/></svg>',
+  meteor:     '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.9 2.5a1.5 1.5 0 0 0-2.1 0L4.1 17.2A5 5 0 0 0 3 20a1 1 0 0 0 1 1 5 5 0 0 0 2.8-1.1L21.4 5.1a1.5 1.5 0 0 0-.5-2.6zM6.5 18.5l-1-1 12-12 1 1-12 12z"/></svg>',
+  dice5:      '<svg viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8" cy="8" r="1.5" fill="#1a0033"/><circle cx="16" cy="8" r="1.5" fill="#1a0033"/><circle cx="12" cy="12" r="1.5" fill="#1a0033"/><circle cx="8" cy="16" r="1.5" fill="#1a0033"/><circle cx="16" cy="16" r="1.5" fill="#1a0033"/></svg>',
+  layers:     '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polygon points="12,2 2,7 12,12 22,7"/><polyline points="2,17 12,22 22,17"/><polyline points="2,12 12,17 22,12"/></svg>',
+  gem:        '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 3l-4 5 10 13L22 8l-4-5H6zm8.5 0H9.5l-2 3h13l-2-3zM4.5 9l7.5 9.75L19.5 9H4.5z"/></svg>',
+  chart:      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="22,12 18,12 15,21 9,3 6,12 2,12"/></svg>',
+  server:     '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>',
+  headset:    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3z"/><path d="M3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>',
+  coins:      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="8" cy="8" r="6"/><path d="M18.09 10.37A6 6 0 1 1 10.34 18"/><path d="M7 6h1v4"/><path d="m16.71 13.88.7.71-2.82 2.82"/></svg>',
+  users:      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>',
+  medal:      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="14" r="7"/><path d="M8.21 3.06 7 7h10l-1.21-3.94A2 2 0 0 0 13.86 2h-3.72a2 2 0 0 0-1.93 1.06z"/><path d="M12 11v6"/><path d="M9 14h6"/></svg>',
+  rotate:     '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>',
+  shield:     '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L3 7v6c0 5.25 3.75 10.15 9 11.35C17.25 23.15 21 18.25 21 13V7L12 2z"/></svg>',
+  lock:       '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>',
+  info:       '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>',
+  warn:       '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0zM12 9v4m0 4h.01"/></svg>',
+  phone:      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.15 12 19.79 19.79 0 0 1 1.08 3.4 2 2 0 0 1 3.07 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16v.92z"/></svg>',
+  arrow:      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg>',
+  arrowDown:  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19,12 12,19 5,12"/></svg>',
+  chevDown:   '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6,9 12,15 18,9"/></svg>',
+  facebook:   '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>',
+  messenger:  '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.145 2 11.243c0 2.908 1.438 5.504 3.686 7.2V22l3.37-1.85c.9.25 1.854.384 2.844.384 5.523 0 10-4.145 10-9.243S17.523 2 12 2zm1.043 12.448l-2.55-2.72-4.976 2.72 5.474-5.808 2.613 2.72 4.913-2.72-5.474 5.808z"/></svg>',
+  userGroup:  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>',
+};
+
+function icon(name, extraClass) {
+  var el = document.createElement('span');
+  el.className = 'icon-wrap' + (extraClass ? ' ' + extraClass : '');
+  el.innerHTML = ICONS[name] || '';
+  return el;
+}
+
+// Inject all icons after DOM ready
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('[data-icon]').forEach(function (el) {
+    var name = el.getAttribute('data-icon');
+    var size = el.getAttribute('data-size') || 'md';
+    el.className = (el.className || '') + ' icon-wrap icon-' + size;
+    el.innerHTML = ICONS[name] || '';
+  });
+});
+</script>
+</head>
+
+<body class="font-body text-white antialiased">
+
+<!-- ══════════════════════════════════════════
+     CASH OUT ALERT BAR
+══════════════════════════════════════════ -->
+<div id="alertBar" class="fixed inset-x-0 flex justify-center px-3 pt-1 pointer-events-none" style="z-index:70; top:104px;">
+  <style>@media(min-width:640px){#alertBar{top:124px;}}</style>
+  <div id="alertPill"
+       class="alert-pill pointer-events-auto flex items-center gap-2 sm:gap-3 w-full max-w-[92vw] sm:max-w-2xl bg-voidDeep/95 border-2 border-hotgold rounded-2xl px-4 sm:px-6 py-2.5 sm:py-3">
+    <span id="alertEmoji" class="text-base sm:text-lg shrink-0" aria-hidden="true">🔥</span>
+    <p id="alertText" class="text-xs sm:text-sm font-semibold text-white leading-snug flex-1">Cash Out Alert Loading…</p>
+    <span class="text-base sm:text-lg shrink-0" aria-hidden="true">💸</span>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     NAV
+══════════════════════════════════════════ -->
+<header class="fixed top-0 inset-x-0 backdrop-blur-md bg-void/85 border-b border-gold/20" style="z-index:80;">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 h-16 sm:h-20 flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-1">
+      <span class="text-2xl sm:text-3xl font-display tracking-wide text-gold text-glow">PRIZE</span>
+      <span class="text-2xl sm:text-3xl font-display tracking-wide text-white">NOVA</span>
+    </a>
+    <nav class="hidden md:flex items-center gap-7 font-semibold text-sm tracking-wide text-white/75">
+      <a href="#games"   class="hover:text-gold   transition-colors">Games</a>
+      <a href="#bonuses" class="hover:text-gold   transition-colors">Bonuses</a>
+      <a href="#banking" class="hover:text-gold   transition-colors">Banking</a>
+      <a href="#faq"     class="hover:text-gold   transition-colors">FAQ</a>
+      <a href="#caesars" class="transition-colors" style="color:rgba(201,168,76,.85)">VIP Lounge</a>
+    </nav>
+    <a href="https://www.facebook.com/PrizeNova" target="_blank" rel="noopener noreferrer"
+       class="bg-gold hover:bg-hotgold text-void font-extrabold text-xs sm:text-sm px-4 sm:px-6 py-2.5 rounded-full transition-all hover:scale-105 active:scale-95">
+      Claim Bonus
+    </a>
+  </div>
+</header>
+
+<main id="top" class="pt-36 sm:pt-40">
+
+<!-- ══════════════════════════════════════════
+     HERO
+══════════════════════════════════════════ -->
+<section class="relative px-5 sm:px-8 lg:px-10 pt-14 sm:pt-24 lg:pt-32 pb-16 sm:pb-24 text-center overflow-hidden">
+  <div class="pointer-events-none absolute top-10 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-gold/10 rounded-full blur-[120px]"></div>
+  <div class="pointer-events-none absolute -bottom-10 -right-10 w-[300px] h-[300px] bg-magenta/20 rounded-full blur-[100px]"></div>
+
+  <div class="relative max-w-4xl mx-auto">
+    <div class="bulb-row mb-6">
+      <span class="bulb"></span><span class="bulb"></span><span class="bulb"></span>
+      <span class="bulb"></span><span class="bulb"></span><span class="bulb"></span>
+      <span class="bulb"></span>
+    </div>
+
+    <p class="font-mono uppercase tracking-[.3em] text-gold text-xs sm:text-sm mb-4">Premium Sweepstakes Gaming</p>
+
+    <h1 class="font-display text-5xl sm:text-7xl lg:text-[6rem] leading-[.92] tracking-wide text-glow">
+      WIN BIG AT<br><span class="text-gold">PRIZE NOVA</span>
+    </h1>
+
+    <p class="mt-6 text-lg sm:text-xl lg:text-2xl font-semibold text-white/90 max-w-2xl mx-auto leading-snug">
+      Score a <span class="text-gold font-extrabold">100% Sign-Up Bonus</span> the moment you join,
+      and play featured games with an
+      <span class="text-gold font-extrabold">up-to-80% win rate</span> across our top titles.
+    </p>
+
+    <div class="mt-9 flex flex-col sm:flex-row items-center justify-center gap-4">
+      <a href="https://www.facebook.com/PrizeNova" target="_blank" rel="noopener noreferrer"
+         class="glow-cta w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-gold hover:bg-hotgold text-void font-display text-2xl tracking-wide px-10 py-4 rounded-full transition-all hover:scale-105 active:scale-95">
+        <span data-icon="bolt" data-size="md" class="text-void"></span> CLAIM FREE BONUS
+      </a>
+      <a href="#games"
+         class="w-full sm:w-auto inline-flex items-center justify-center gap-2 border-2 border-white/25 hover:border-gold text-white hover:text-gold font-semibold text-base px-8 py-4 rounded-full transition-all">
+        Browse Games <span data-icon="arrowDown" data-size="sm"></span>
+      </a>
+    </div>
+
+    <p class="mt-5 text-xs sm:text-sm text-white/45 font-medium">
+      18+ / 21+ where required &middot; Sweepstakes promotion play &middot; No purchase necessary
+    </p>
+  </div>
+
+  <!-- stat strip -->
+  <div class="relative max-w-4xl mx-auto mt-14 sm:mt-20 grid grid-cols-3 gap-3 sm:gap-6">
+    <div class="rounded-2xl bg-panel/60 border border-gold/20 px-3 sm:px-6 py-5 sm:py-7">
+      <p class="font-mono text-2xl sm:text-4xl font-bold text-gold">14+</p>
+      <p class="text-[11px] sm:text-sm text-white/60 mt-1 font-medium">Game Platforms</p>
+    </div>
+    <div class="rounded-2xl bg-panel/60 border border-gold/20 px-3 sm:px-6 py-5 sm:py-7">
+      <p class="font-mono text-2xl sm:text-4xl font-bold text-gold">100%</p>
+      <p class="text-[11px] sm:text-sm text-white/60 mt-1 font-medium">Sign-Up Match</p>
+    </div>
+    <div class="rounded-2xl bg-panel/60 border border-gold/20 px-3 sm:px-6 py-5 sm:py-7">
+      <p class="font-mono text-2xl sm:text-4xl font-bold text-gold">24/7</p>
+      <p class="text-[11px] sm:text-sm text-white/60 mt-1 font-medium">Live Support</p>
+    </div>
+  </div>
+</section>
+
+<!-- Ticker -->
+<div class="bg-gold text-void py-2.5 overflow-hidden border-y-2 border-hotgold" aria-hidden="true">
+  <div class="flex whitespace-nowrap ticker-track font-display text-lg sm:text-xl tracking-wider select-none">
+    <div class="flex shrink-0">
+      <span class="px-6">★ 100% SIGN-UP BONUS</span><span class="px-6">★ CAESARS VIP LOUNGE</span>
+      <span class="px-6">★ FAST CASH OUTS</span><span class="px-6">★ 14+ TOP PLATFORMS</span>
+      <span class="px-6">★ REFER A FRIEND — EARN 50%</span><span class="px-6">★ $1,500 HIGHROLLER PAYOUTS</span>
+    </div>
+    <div class="flex shrink-0" aria-hidden="true">
+      <span class="px-6">★ 100% SIGN-UP BONUS</span><span class="px-6">★ CAESARS VIP LOUNGE</span>
+      <span class="px-6">★ FAST CASH OUTS</span><span class="px-6">★ 14+ TOP PLATFORMS</span>
+      <span class="px-6">★ REFER A FRIEND — EARN 50%</span><span class="px-6">★ $1,500 HIGHROLLER PAYOUTS</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     GAMES GRID
+══════════════════════════════════════════ -->
+<section id="games" class="section-pad px-5 sm:px-8 lg:px-10 max-w-7xl mx-auto">
+  <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
+    <p class="font-mono uppercase tracking-[.3em] text-gold text-xs sm:text-sm mb-3">The Lineup</p>
+    <h2 class="font-display text-4xl sm:text-6xl tracking-wide">CHOOSE YOUR GAME</h2>
+    <p class="mt-4 text-white/60 text-sm sm:text-base">14 top fish and slot platforms, all on one account.</p>
+  </div>
+
+  <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 gap-4 sm:gap-5">
+
+    <a href="https://www.facebook.com/PrizeNova" target="_blank" rel="noopener noreferrer" class="game-card group rounded-2xl bg-panel/70 border border-white/10 p-4 sm:p-5 flex flex-col items-center text-center gap-3">
+      <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-void flex items-center justify-center border border-gold/30 group-hover:border-gold transition-colors text-gold">
+        <span data-icon="star" data-size="md"></span>
+      </div>
+      <span class="font-bold text-xs sm:text-sm leading-tight">Orion Stars</span>
+      <span class="text-[10px] font-mono text-gold/75 uppercase tracking-wider">Play Now</span>
+    </a>
+
+    <a href="https://www.facebook.com/PrizeNova" target="_blank" rel="noopener noreferrer" class="game-card group rounded-2xl bg-panel/70 border border-white/10 p-4 sm:p-5 flex flex-col items-center text-center gap-3">
+      <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-void flex items-center justify-center border border-gold/30 group-hover:border-gold transition-colors text-gold">
+        <span data-icon="dice" data-size="md"></span>
+      </div>
+      <span class="font-bold text-xs sm:text-sm leading-tight">Juwa</span>
+      <span class="text-[10px] font-mono text-gold/75 uppercase tracking-wider">Play Now</span>
+    </a>
+
+    <a href="https://www.facebook.com/PrizeNova" target="_blank" rel="noopener noreferrer" class="game-card group rounded-2xl bg-panel/70 border border-white/10 p-4 sm:p-5 flex flex-col items-center text-center gap-3">
+      <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-void flex items-center justify-center border border-gold/30 group-hover:border-gold transition-colors text-gold">
+        <span data-icon="vault" data-size="md"></span>
+      </div>
+      <span class="font-bold text-xs sm:text-sm leading-tight">Game Vault</span>
+      <span class="text-[10px] font-mono text-gold/75 uppercase tracking-wider">Play Now</span>
+    </a>
+
+    <a href="https://www.facebook.com/PrizeNova" target="_blank" rel="noopener noreferrer" class="game-card group rounded-2xl bg-panel/70 border border-white/10 p-4 sm:p-5 flex flex-col items-center text-center gap-3">
+      <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-void flex items-center justify-center border border-gold/30 group-hover:border-gold transition-colors text-gold">
+        <span data-icon="cards" data-size="md"></span>
+      </div>
+      <span class="font-bold text-xs sm:text-sm leading-tight">Vegas Sweeps</span>
+      <span class="text-[10px] font-mono text-gold/75 uppercase tracking-wider">Play Now</span>
+    </a>
+
+    <a href="https://www.facebook.com/PrizeNova" target="_blank" rel="noopener noreferrer" class="game-card group rounded-2xl bg-panel/70 border border-white/10 p-4 sm:p-5 flex flex-col items-center text-center gap-3">
+      <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-void flex items-center justify-center border border-gold/30 group-hover:border-gold transition-colors text-gold">
+        <span data-icon="fire" data-size="md"></span>
+      </div>
+      <span class="font-bold text-xs sm:text-sm leading-tight">Fire Kirin</span>
+      <span class="text-[10px] font-mono text-gold/75 uppercase tracking-wider">Play Now</span>
+    </a>
+
+    <a href="https://www.facebook.com/PrizeNova" target="_blank" rel="noopener noreferrer" class="game-card group rounded-2xl bg-panel/70 border border-white/10 p-4 sm:p-5 flex flex-col items-center text-center gap-3">
+      <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-void flex items-center justify-center border border-gold/30 group-hover:border-gold transition-colors text-gold">
+        <span data-icon="paw" data-size="md"></span>
+      </div>
+      <span class="font-bold text-xs sm:text-sm leading-tight">Panda Master</span>
+      <span class="text-[10px] font-mono text-gold/75 uppercase tracking-wider">Play Now</span>
+    </a>
+
+    <a href="https://www.facebook.com/PrizeNova" target="_blank" rel="noopener noreferrer" class="game-card group rounded-2xl bg-panel/70 border border-white/10 p-4 sm:p-5 flex flex-col items-center text-center gap-3">
+      <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-void flex items-center justify-center border border-gold/30 group-hover:border-gold transition-colors text-gold">
+        <span data-icon="road" data-size="md"></span>
+      </div>
+      <span class="font-bold text-xs sm:text-sm leading-tight">Milky Way</span>
+      <span class="text-[10px] font-mono text-gold/75 uppercase tracking-wider">Play Now</span>
+    </a>
+
+    <a href="https://www.facebook.com/PrizeNova" target="_blank" rel="noopener noreferrer" class="game-card group rounded-2xl bg-panel/70 border border-white/10 p-4 sm:p-5 flex flex-col items-center text-center gap-3">
+      <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-void flex items-center justify-center border border-gold/30 group-hover:border-gold transition-colors text-gold">
+        <span data-icon="bolt2" data-size="md"></span>
+      </div>
+      <span class="font-bold text-xs sm:text-sm leading-tight">Vblink</span>
+      <span class="text-[10px] font-mono text-gold/75 uppercase tracking-wider">Play Now</span>
+    </a>
+
+    <a href="https://www.facebook.com/PrizeNova" target="_blank" rel="noopener noreferrer" class="game-card group rounded-2xl bg-panel/70 border border-white/10 p-4 sm:p-5 flex flex-col items-center text-center gap-3">
+      <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-void flex items-center justify-center border border-gold/30 group-hover:border-gold transition-colors text-gold">
+        <span data-icon="crown" data-size="md"></span>
+      </div>
+      <span class="font-bold text-xs sm:text-sm leading-tight">Ultra Panda</span>
+      <span class="text-[10px] font-mono text-gold/75 uppercase tracking-wider">Play Now</span>
+    </a>
+
+    <a href="https://www.facebook.com/PrizeNova" target="_blank" rel="noopener noreferrer" class="game-card group rounded-2xl bg-panel/70 border border-white/10 p-4 sm:p-5 flex flex-col items-center text-center gap-3">
+      <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-void flex items-center justify-center border border-gold/30 group-hover:border-gold transition-colors text-gold">
+        <span data-icon="gamepad" data-size="md"></span>
+      </div>
+      <span class="font-bold text-xs sm:text-sm leading-tight">E-Game</span>
+      <span class="text-[10px] font-mono text-gold/75 uppercase tracking-wider">Play Now</span>
+    </a>
+
+    <a href="https://www.facebook.com/PrizeNova" target="_blank" rel="noopener noreferrer" class="game-card group rounded-2xl bg-panel/70 border border-white/10 p-4 sm:p-5 flex flex-col items-center text-center gap-3">
+      <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-void flex items-center justify-center border border-gold/30 group-hover:border-gold transition-colors text-gold">
+        <span data-icon="meteor" data-size="md"></span>
+      </div>
+      <span class="font-bold text-xs sm:text-sm leading-tight">Orion Strike</span>
+      <span class="text-[10px] font-mono text-gold/75 uppercase tracking-wider">Play Now</span>
+    </a>
+
+    <a href="https://www.facebook.com/PrizeNova" target="_blank" rel="noopener noreferrer" class="game-card group rounded-2xl bg-panel/70 border border-white/10 p-4 sm:p-5 flex flex-col items-center text-center gap-3">
+      <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-void flex items-center justify-center border border-gold/30 group-hover:border-gold transition-colors text-gold">
+        <span data-icon="dice5" data-size="md"></span>
+      </div>
+      <span class="font-bold text-xs sm:text-sm leading-tight">Juwa 2.0</span>
+      <span class="text-[10px] font-mono text-gold/75 uppercase tracking-wider">Play Now</span>
+    </a>
+
+    <a href="https://www.facebook.com/PrizeNova" target="_blank" rel="noopener noreferrer" class="game-card group rounded-2xl bg-panel/70 border border-white/10 p-4 sm:p-5 flex flex-col items-center text-center gap-3">
+      <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-void flex items-center justify-center border border-gold/30 group-hover:border-gold transition-colors text-gold">
+        <span data-icon="layers" data-size="md"></span>
+      </div>
+      <span class="font-bold text-xs sm:text-sm leading-tight">Mr. All in One</span>
+      <span class="text-[10px] font-mono text-gold/75 uppercase tracking-wider">Play Now</span>
+    </a>
+
+    <a href="https://www.facebook.com/PrizeNova" target="_blank" rel="noopener noreferrer" class="game-card group rounded-2xl bg-panel/70 border border-white/10 p-4 sm:p-5 flex flex-col items-center text-center gap-3">
+      <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-void flex items-center justify-center border border-gold/30 group-hover:border-gold transition-colors text-gold">
+        <span data-icon="gem" data-size="md"></span>
+      </div>
+      <span class="font-bold text-xs sm:text-sm leading-tight">Noble</span>
+      <span class="text-[10px] font-mono text-gold/75 uppercase tracking-wider">Play Now</span>
+    </a>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     BONUSES  (comes BEFORE banking & VIP per request)
+══════════════════════════════════════════ -->
+<section id="bonuses" class="section-pad px-5 sm:px-8 lg:px-10 border-y border-gold/10" style="background:rgba(10,0,20,.4);">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
+      <p class="font-mono uppercase tracking-[.3em] text-gold text-xs sm:text-sm mb-3">Rewards</p>
+      <h2 class="font-display text-4xl sm:text-6xl tracking-wide">BONUSES & PROMOTIONS</h2>
+      <p class="mt-4 text-white/60 text-sm sm:text-base">Every new player starts with a match bonus. Stay active and the rewards keep stacking.</p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-5 sm:gap-6">
+      <!-- Tall sign-up -->
+      <div class="bonus-tall lg:row-span-2 rounded-3xl border border-gold/30 p-7 sm:p-9 flex flex-col justify-between">
+        <div>
+          <span class="inline-block bg-gold text-void text-[11px] font-extrabold uppercase tracking-wider px-3 py-1 rounded-full mb-5">Most Popular</span>
+          <h3 class="font-display text-3xl sm:text-4xl tracking-wide mb-2">Sign-Up Bonus</h3>
+          <p class="text-white/60 text-sm sm:text-base mb-6">Make your first deposit and we match it dollar for dollar.</p>
+        </div>
+        <div>
+          <p class="font-mono text-6xl sm:text-7xl font-bold text-gold text-glow leading-none">100%</p>
+          <p class="text-white/45 text-xs sm:text-sm mt-3">Match on your first deposit &middot; capped at $20</p>
+          <a href="https://www.facebook.com/PrizeNova" target="_blank" rel="noopener noreferrer"
+             class="mt-6 inline-flex items-center justify-center gap-2 w-full bg-gold hover:bg-hotgold text-void font-extrabold text-sm px-6 py-3.5 rounded-full transition-all hover:scale-[1.02] active:scale-95">
+            Claim This Bonus <span data-icon="arrow" data-size="sm" class="text-void"></span>
+          </a>
+        </div>
+      </div>
+
+      <div class="rounded-3xl bg-panel/60 border border-white/10 p-6 sm:p-7 flex flex-col justify-between hover:border-gold/40 transition-colors">
+        <div>
+          <span data-icon="rotate" data-size="lg" class="text-gold mb-4 block"></span>
+          <h3 class="font-display text-2xl tracking-wide mb-1">Regular Bonus</h3>
+          <p class="text-white/55 text-sm">On every qualifying reload.</p>
+        </div>
+        <div class="mt-5">
+          <p class="font-mono text-4xl font-bold text-gold">20%</p>
+          <p class="text-white/45 text-xs mt-2">Min deposit to qualify: <span class="text-white/75 font-semibold">$10</span></p>
+        </div>
+      </div>
+
+      <div class="rounded-3xl bg-panel/60 border border-white/10 p-6 sm:p-7 flex flex-col justify-between hover:border-gold/40 transition-colors">
+        <div>
+          <span data-icon="users" data-size="lg" class="text-gold mb-4 block"></span>
+          <h3 class="font-display text-2xl tracking-wide mb-1">Referral Bonus</h3>
+          <p class="text-white/55 text-sm">Bring a friend, both of you win.</p>
+        </div>
+        <div class="mt-5">
+          <p class="font-mono text-4xl font-bold text-gold">50%</p>
+          <p class="text-white/45 text-xs mt-2">Capped at $20 &middot; unique profile required</p>
+        </div>
+      </div>
+
+      <div class="lg:col-span-2 rounded-3xl bg-panel/60 border border-white/10 p-6 sm:p-7 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5 hover:border-gold/40 transition-colors">
+        <div class="flex items-start gap-4">
+          <span data-icon="medal" data-size="lg" class="text-gold mt-1 shrink-0"></span>
+          <div>
+            <h3 class="font-display text-2xl tracking-wide mb-1">Weekly, Loyalty & Extra Bonuses</h3>
+            <p class="text-white/55 text-sm max-w-md">Stay active and unlock recurring rewards on top of your regular bonus.</p>
+          </div>
+        </div>
+        <p class="font-mono text-4xl font-bold text-gold whitespace-nowrap">Up to 40%</p>
+      </div>
+    </div>
+
+    <div class="mt-8 flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 rounded-2xl border border-gold/25 bg-gold/5 px-5 sm:px-6 py-4">
+      <span data-icon="info" data-size="md" class="text-gold shrink-0"></span>
+      <p class="text-xs sm:text-sm text-white/70 leading-relaxed">
+        <span class="font-bold text-gold">Important:</span> All standard bonuses are capped at $20, except Weekly and Loyalty promotions. Highroller accounts have separate VIP bonus terms.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     BANKING & PAYOUT  (after bonuses, before VIP)
+══════════════════════════════════════════ -->
+<section id="banking" class="section-pad px-5 sm:px-8 lg:px-10 max-w-7xl mx-auto">
+  <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
+    <p class="font-mono uppercase tracking-[.3em] text-gold text-xs sm:text-sm mb-3">Trust & Security</p>
+    <h2 class="font-display text-4xl sm:text-6xl tracking-wide">BANKING & PAYOUT RULES</h2>
+    <p class="mt-4 text-white/60 text-sm sm:text-base">Clear limits, no surprises. Here's exactly how cash outs work.</p>
+  </div>
+
+  <!-- Speed badge -->
+  <div class="max-w-3xl mx-auto rounded-3xl border border-gold/30 px-6 sm:px-10 py-8 sm:py-10 text-center mb-12 bg-panel/30">
+    <div class="w-16 h-16 sm:w-20 sm:h-20 mx-auto rounded-full bg-gold flex items-center justify-center mb-4 text-void">
+      <span data-icon="shield" data-size="xl"></span>
+    </div>
+    <h3 class="font-display text-3xl sm:text-4xl tracking-wide text-gold text-glow mb-2">LIGHTNING-FAST CASH OUT</h3>
+    <p class="text-white/65 text-sm sm:text-base max-w-lg mx-auto">Most cash outs are processed within minutes of approval — our team reviews requests around the clock.</p>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
+    <div class="rounded-2xl bg-panel/60 border border-white/10 p-6 sm:p-7">
+      <h3 class="font-display text-xl tracking-wide mb-5 flex items-center gap-3">
+        <span data-icon="coins" data-size="md" class="text-gold"></span> Standard Cash Out
+      </h3>
+      <ul class="space-y-3">
+        <li class="flex items-center justify-between border-b border-white/10 pb-3">
+          <span class="text-white/65 text-sm">Minimum</span>
+          <span class="font-mono font-bold text-gold text-lg">$30</span>
+        </li>
+        <li class="flex items-center justify-between pb-1">
+          <span class="text-white/65 text-sm">Maximum</span>
+          <span class="font-mono font-bold text-gold text-lg">$500 <span class="text-xs text-white/40">/ game</span></span>
+        </li>
+        <li class="text-xs text-white/40 leading-relaxed">Maximum varies based on total coins recharged.</li>
+      </ul>
+    </div>
+
+    <div class="rounded-2xl bg-panel/60 border border-white/10 p-6 sm:p-7">
+      <h3 class="font-display text-xl tracking-wide mb-5 flex items-center gap-3">
+        <span data-icon="userGroup" data-size="md" class="text-gold"></span> Referral Cash Out
+      </h3>
+      <ul class="space-y-3">
+        <li class="flex items-center justify-between border-b border-white/10 pb-3">
+          <span class="text-white/65 text-sm">Minimum</span>
+          <span class="font-mono font-bold text-gold text-lg">$50</span>
+        </li>
+        <li class="flex items-center justify-between">
+          <span class="text-white/65 text-sm">Maximum</span>
+          <span class="font-mono font-bold text-gold text-lg">$100</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="rounded-2xl p-6 sm:p-7 flex flex-col sm:flex-row gap-4 sm:items-center" style="background:rgba(201,168,76,.06); border:1px solid rgba(201,168,76,.3);">
+      <span data-icon="crown" data-size="lg" class="shrink-0" style="color:#c9a84c;"></span>
+      <div>
+        <p class="font-roman font-semibold text-sm mb-1" style="color:#f5e6c8;">Caesars Highroller Tier</p>
+        <p class="text-white/55 text-xs sm:text-sm leading-relaxed">
+          Separate limits apply: <span style="color:#c9a84c;" class="font-semibold">$100 min deposit</span> &amp; <span style="color:#c9a84c;" class="font-semibold">$1,500 max cash out per game</span>. Managed by your VIP Account Manager.
+        </p>
+      </div>
+    </div>
+
+    <div class="rounded-2xl border border-gold/25 bg-gold/5 p-6 sm:p-7 flex flex-col sm:flex-row gap-4 sm:items-center">
+      <span data-icon="lock" data-size="lg" class="text-gold shrink-0"></span>
+      <p class="text-sm sm:text-base text-white/75 leading-relaxed">
+        <span class="font-bold text-gold">Security Policy:</span> Your player profile and Cashtag must be 100% unique to qualify for sign-up and referral bonuses. Duplicate profiles or shared Cashtags are ineligible.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     CAESARS LOUNGE — last major section
+══════════════════════════════════════════ -->
+<section id="caesars" class="section-pad px-5 sm:px-8 lg:px-10"
+         style="background:linear-gradient(180deg,#0a0014 0%,#0d0800 30%,#0a0500 60%,#0d0800 80%,#0a0014 100%);">
+  <div class="max-w-6xl mx-auto">
+
+    <!-- Header -->
+    <div class="text-center mb-14 sm:mb-20">
+      <div class="flex items-center justify-center gap-4 sm:gap-6 mb-6">
+        <!-- Left laurel -->
+        <svg class="w-10 h-10 sm:w-16 sm:h-16 opacity-90" viewBox="0 0 64 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="transform:scaleX(-1);">
+          <path d="M32 72 C26 58, 10 46, 12 26 C15 10, 28 12, 30 26" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+          <ellipse cx="14" cy="16" rx="6" ry="9" transform="rotate(-35 14 16)" fill="rgba(201,168,76,.3)" stroke="#c9a84c" stroke-width="1"/>
+          <ellipse cx="19" cy="30" rx="6" ry="8" transform="rotate(-18 19 30)" fill="rgba(201,168,76,.25)" stroke="#c9a84c" stroke-width="1"/>
+          <ellipse cx="23" cy="44" rx="6" ry="8" transform="rotate(-5 23 44)"  fill="rgba(201,168,76,.22)" stroke="#c9a84c" stroke-width="1"/>
+          <ellipse cx="27" cy="57" rx="5" ry="7" transform="rotate(8 27 57)"   fill="rgba(201,168,76,.18)" stroke="#c9a84c" stroke-width="1"/>
+          <path d="M32 72 C30 60, 28 48, 31 36 C33 24, 30 14, 24 10" stroke="#c9a84c" stroke-width="1" stroke-linecap="round" stroke-dasharray="3 4" fill="none"/>
+        </svg>
+
+        <div class="text-center">
+          <p class="font-roman uppercase tracking-[.35em] text-xs sm:text-sm mb-1" style="color:#c9a84c;">Est. For The Elite</p>
+          <p class="font-roman text-[10px] sm:text-xs tracking-widest uppercase" style="color:rgba(245,230,200,.45);">Highroller VIP Access</p>
+        </div>
+
+        <!-- Right laurel -->
+        <svg class="w-10 h-10 sm:w-16 sm:h-16 opacity-90" viewBox="0 0 64 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M32 72 C26 58, 10 46, 12 26 C15 10, 28 12, 30 26" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+          <ellipse cx="14" cy="16" rx="6" ry="9" transform="rotate(-35 14 16)" fill="rgba(201,168,76,.3)" stroke="#c9a84c" stroke-width="1"/>
+          <ellipse cx="19" cy="30" rx="6" ry="8" transform="rotate(-18 19 30)" fill="rgba(201,168,76,.25)" stroke="#c9a84c" stroke-width="1"/>
+          <ellipse cx="23" cy="44" rx="6" ry="8" transform="rotate(-5 23 44)"  fill="rgba(201,168,76,.22)" stroke="#c9a84c" stroke-width="1"/>
+          <ellipse cx="27" cy="57" rx="5" ry="7" transform="rotate(8 27 57)"   fill="rgba(201,168,76,.18)" stroke="#c9a84c" stroke-width="1"/>
+          <path d="M32 72 C30 60, 28 48, 31 36 C33 24, 30 14, 24 10" stroke="#c9a84c" stroke-width="1" stroke-linecap="round" stroke-dasharray="3 4" fill="none"/>
+        </svg>
+      </div>
+
+      <h2 class="font-roman font-black text-3xl sm:text-5xl lg:text-6xl leading-tight text-glow-b"
+          style="color:#f5e6c8;">Caesars Lounge</h2>
+      <p class="font-roman text-lg sm:text-2xl mt-2" style="color:#c9a84c;">The Highroller Elite Experience</p>
+      <p class="mt-5 text-white/50 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
+        A dedicated tier for players who demand the highest level of service, server performance, and payout ceilings. Not for everyone — built for the best.
+      </p>
+    </div>
+
+    <!-- Main marble card -->
+    <div class="marble-border rounded-3xl mb-10 sm:mb-14">
+      <div class="relative rounded-3xl overflow-hidden p-6 sm:p-10"
+           style="background:linear-gradient(135deg,#1a1100 0%,#0d0800 50%,#140c00 100%);">
+
+        <!-- Three features -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 mb-10 sm:mb-12">
+
+          <div class="caesar-card rounded-2xl p-6 flex flex-col items-center text-center gap-4">
+            <div class="w-14 h-14 rounded-full flex items-center justify-center" style="background:radial-gradient(circle,rgba(201,168,76,.2),transparent);border:1px solid rgba(201,168,76,.5);">
+              <span data-icon="chart" data-size="lg" style="color:#c9a84c;"></span>
+            </div>
+            <h3 class="font-roman font-bold text-base sm:text-lg" style="color:#f5e6c8;">Optimized Game Engines</h3>
+            <p class="text-white/50 text-xs sm:text-sm leading-relaxed">
+              High-performance servers tuned for maximum throughput, with configurations that favor active session engagement across all 14 platforms.
+            </p>
+          </div>
+
+          <div class="caesar-card rounded-2xl p-6 flex flex-col items-center text-center gap-4">
+            <div class="w-14 h-14 rounded-full flex items-center justify-center" style="background:radial-gradient(circle,rgba(201,168,76,.2),transparent);border:1px solid rgba(201,168,76,.5);">
+              <span data-icon="server" data-size="lg" style="color:#c9a84c;"></span>
+            </div>
+            <h3 class="font-roman font-bold text-base sm:text-lg" style="color:#f5e6c8;">Dedicated High-Stakes Servers</h3>
+            <p class="text-white/50 text-xs sm:text-sm leading-relaxed">
+              Highroller accounts run on isolated backend infrastructure — zero shared load, near-zero lag, and priority routing every session.
+            </p>
+          </div>
+
+          <div class="caesar-card rounded-2xl p-6 flex flex-col items-center text-center gap-4">
+            <div class="w-14 h-14 rounded-full flex items-center justify-center" style="background:radial-gradient(circle,rgba(201,168,76,.2),transparent);border:1px solid rgba(201,168,76,.5);">
+              <span data-icon="headset" data-size="lg" style="color:#c9a84c;"></span>
+            </div>
+            <h3 class="font-roman font-bold text-base sm:text-lg" style="color:#f5e6c8;">24/7 VIP Account Manager</h3>
+            <p class="text-white/50 text-xs sm:text-sm leading-relaxed">
+              Every Highroller member gets a dedicated personal manager available around the clock for deposits, withdrawals, and custom promos.
+            </p>
+          </div>
+        </div>
+
+        <!-- Divider -->
+        <div class="mb-10" style="height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,76,.4),transparent);"></div>
+
+        <!-- Limits + policy -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6">
+          <div class="rounded-2xl p-5 sm:p-6" style="background:rgba(201,168,76,.07);border:1px solid rgba(201,168,76,.25);">
+            <p class="font-roman font-semibold uppercase tracking-widest text-xs mb-5 flex items-center gap-2" style="color:#c9a84c;">
+              <span data-icon="coins" data-size="sm" style="color:#c9a84c;"></span> Highroller Limits
+            </p>
+            <ul class="space-y-3">
+              <li class="flex items-center justify-between pb-3" style="border-bottom:1px solid rgba(201,168,76,.15);">
+                <span class="text-white/65 text-sm">Minimum Deposit</span>
+                <span class="font-mono font-bold text-xl" style="color:#c9a84c;">$100</span>
+              </li>
+              <li class="flex items-center justify-between">
+                <span class="text-white/65 text-sm">Maximum Cash Out</span>
+                <span class="font-mono font-bold text-xl" style="color:#c9a84c;">$1,500 <span class="text-xs font-normal text-white/40">/ game</span></span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="rounded-2xl p-5 sm:p-6" style="background:rgba(201,168,76,.05);border:1px solid rgba(201,168,76,.2);">
+            <p class="font-roman font-semibold uppercase tracking-widest text-xs mb-4 flex items-center gap-2" style="color:#c9a84c;">
+              <span data-icon="shield" data-size="sm" style="color:#c9a84c;"></span> Bonus Policy
+            </p>
+            <p class="text-white/60 text-xs sm:text-sm leading-relaxed">
+              <span style="color:#f5e6c8;font-weight:600;">Strictly NO automatic deposit bonuses</span> on Highroller accounts — this maintains raw payout integrity on dedicated servers.
+            </p>
+            <p class="text-white/40 text-xs leading-relaxed mt-3">
+              Custom bonuses may be granted exclusively to existing loyal players under verified circumstances, at the sole discretion of your VIP Manager.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- VIP CTA -->
+    <div class="text-center">
+      <a href="https://www.facebook.com/PrizeNova" target="_blank" rel="noopener noreferrer"
+         class="inline-flex items-center gap-3 font-roman font-bold text-sm sm:text-base px-8 sm:px-10 py-4 rounded-full transition-all hover:scale-105 active:scale-95"
+         style="background:linear-gradient(135deg,#c9a84c,#f5e6c8,#c9a84c);color:#0d0800;box-shadow:0 0 20px rgba(201,168,76,.4),0 0 40px rgba(201,168,76,.15);">
+        <span data-icon="crown" data-size="md" style="color:#0d0800;"></span>
+        Request VIP Highroller Access
+      </a>
+      <p class="text-white/30 text-xs mt-4">Message us on Facebook and mention "Caesars Lounge" to begin your application.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     FAQ
+══════════════════════════════════════════ -->
+<section id="faq" class="section-pad px-5 sm:px-8 lg:px-10 border-y border-gold/10" style="background:rgba(10,0,20,.4);">
+  <div class="max-w-3xl mx-auto">
+    <div class="text-center mb-10 sm:mb-14">
+      <p class="font-mono uppercase tracking-[.3em] text-gold text-xs sm:text-sm mb-3">Good to Know</p>
+      <h2 class="font-display text-4xl sm:text-6xl tracking-wide">QUICK ANSWERS</h2>
+      <p class="mt-4 text-white/55 text-sm sm:text-base">Everything you need before you start playing.</p>
+    </div>
+
+    <div class="space-y-3">
+
+      <details class="group rounded-2xl bg-panel/60 border border-white/10 px-5 sm:px-6 py-4 sm:py-5 open:border-gold/40 transition-colors cursor-pointer">
+        <summary class="flex items-center justify-between font-bold text-sm sm:text-base list-none select-none">
+          How do I claim my sign-up bonus?
+          <span data-icon="chevDown" data-size="sm" class="text-gold shrink-0 transition-transform group-open:rotate-180"></span>
+        </summary>
+        <p class="text-white/60 text-sm mt-4 leading-relaxed">
+          Message us on Facebook to set up your account, make your first qualifying deposit, and your 100% match (up to $20) is applied by our team immediately.
+        </p>
+      </details>
+
+      <details class="group rounded-2xl bg-panel/60 border border-white/10 px-5 sm:px-6 py-4 sm:py-5 open:border-gold/40 transition-colors cursor-pointer">
+        <summary class="flex items-center justify-between font-bold text-sm sm:text-base list-none select-none">
+          Which games can I play with one account?
+          <span data-icon="chevDown" data-size="sm" class="text-gold shrink-0 transition-transform group-open:rotate-180"></span>
+        </summary>
+        <p class="text-white/60 text-sm mt-4 leading-relaxed">
+          All 14 platforms — Orion Stars, Juwa, Game Vault, Vegas Sweeps, Fire Kirin, Panda Master, Milky Way, Vblink, Ultra Panda, E-Game, Orion Strike, Juwa 2.0, Mr. All in One, and Noble — are accessible through your single Prize Nova account.
+        </p>
+      </details>
+
+      <details class="group rounded-2xl bg-panel/60 border border-white/10 px-5 sm:px-6 py-4 sm:py-5 open:border-gold/40 transition-colors cursor-pointer">
+        <summary class="flex items-center justify-between font-bold text-sm sm:text-base list-none select-none">
+          How long does a cash out take?
+          <span data-icon="chevDown" data-size="sm" class="text-gold shrink-0 transition-transform group-open:rotate-180"></span>
+        </summary>
+        <p class="text-white/60 text-sm mt-4 leading-relaxed">
+          Most standard requests ($30–$500) are processed within minutes once reviewed. Highroller withdrawals are handled personally by your dedicated VIP Manager with priority routing.
+        </p>
+      </details>
+
+      <details class="group rounded-2xl bg-panel/60 border border-white/10 px-5 sm:px-6 py-4 sm:py-5 open:border-gold/40 transition-colors cursor-pointer">
+        <summary class="flex items-center justify-between font-bold text-sm sm:text-base list-none select-none">
+          How do I apply for the Caesars Highroller Lounge?
+          <span data-icon="chevDown" data-size="sm" class="text-gold shrink-0 transition-transform group-open:rotate-180"></span>
+        </summary>
+        <p class="text-white/60 text-sm mt-4 leading-relaxed">
+          Message us on Facebook and mention <span class="text-burnished font-semibold">"Caesars Lounge"</span>. Our team will verify your account history and walk you through VIP tier onboarding. Minimum deposit for Highroller accounts is $100.
+        </p>
+      </details>
+
+      <details class="group rounded-2xl bg-panel/60 border border-white/10 px-5 sm:px-6 py-4 sm:py-5 open:border-gold/40 transition-colors cursor-pointer">
+        <summary class="flex items-center justify-between font-bold text-sm sm:text-base list-none select-none">
+          Can I refer a friend and earn a bonus?
+          <span data-icon="chevDown" data-size="sm" class="text-gold shrink-0 transition-transform group-open:rotate-180"></span>
+        </summary>
+        <p class="text-white/60 text-sm mt-4 leading-relaxed">
+          Yes — you earn a 50% referral bonus (capped at $20) when a friend you refer signs up and deposits. Both your profile and your Cashtag must be 100% unique to qualify. Referral cash outs run $50 minimum, $100 maximum.
+        </p>
+      </details>
+
+      <details class="group rounded-2xl bg-panel/60 border border-white/10 px-5 sm:px-6 py-4 sm:py-5 open:border-gold/40 transition-colors cursor-pointer">
+        <summary class="flex items-center justify-between font-bold text-sm sm:text-base list-none select-none">
+          Is this real money gambling?
+          <span data-icon="chevDown" data-size="sm" class="text-gold shrink-0 transition-transform group-open:rotate-180"></span>
+        </summary>
+        <p class="text-white/60 text-sm mt-4 leading-relaxed">
+          Prize Nova operates as a sweepstakes promotion for amusement purposes. No purchase is necessary to participate, and a purchase does not improve your chances of winning. See the full disclaimer in our footer for details.
+        </p>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     OUR TEAM
+══════════════════════════════════════════ -->
+<section id="team" class="section-pad px-5 sm:px-8 lg:px-10 border-y border-gold/10" style="background:rgba(10,0,20,.5);">
+  <div class="max-w-5xl mx-auto">
+    <div class="text-center mb-12 sm:mb-16">
+      <p class="font-mono uppercase tracking-[.3em] text-gold text-xs sm:text-sm mb-3">The People Behind Prize Nova</p>
+      <h2 class="font-display text-4xl sm:text-6xl tracking-wide">MEET OUR TEAM</h2>
+      <p class="mt-4 text-white/55 text-sm sm:text-base">Real people, available 24/7 to support your experience.</p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8">
+
+      <!-- Bridget — Owner & Manager -->
+      <div class="rounded-3xl bg-panel/60 border border-gold/25 p-6 sm:p-7 flex flex-col items-center text-center gap-4 hover:border-gold/60 transition-colors">
+        <!-- AI-generated avatar: elegant woman, illustrated style -->
+        <div style="width:96px;height:96px;border-radius:50%;overflow:hidden;border:4px solid rgba(255,204,0,.4);flex-shrink:0;display:block;">
+          <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;display:block;">
+            <defs>
+              <radialGradient id="bg1" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#3d1480"/>
+                <stop offset="100%" stop-color="#1a0033"/>
+              </radialGradient>
+              <radialGradient id="skin1" cx="50%" cy="40%" r="60%">
+                <stop offset="0%" stop-color="#f5c9a0"/>
+                <stop offset="100%" stop-color="#e8a87c"/>
+              </radialGradient>
+            </defs>
+            <rect width="120" height="120" fill="url(#bg1)"/>
+            <!-- Body/shoulders -->
+            <ellipse cx="60" cy="108" rx="38" ry="22" fill="#1a0a3e"/>
+            <!-- Neck -->
+            <rect x="52" y="75" width="16" height="18" rx="6" fill="url(#skin1)"/>
+            <!-- Head -->
+            <ellipse cx="60" cy="58" rx="26" ry="28" fill="url(#skin1)"/>
+            <!-- Hair — long elegant -->
+            <ellipse cx="60" cy="40" rx="27" ry="18" fill="#3d1a00"/>
+            <path d="M34 50 Q28 80 34 100" stroke="#3d1a00" stroke-width="10" fill="none" stroke-linecap="round"/>
+            <path d="M86 50 Q92 80 86 100" stroke="#3d1a00" stroke-width="10" fill="none" stroke-linecap="round"/>
+            <!-- Eyes -->
+            <ellipse cx="50" cy="58" rx="4" ry="4.5" fill="#fff"/>
+            <ellipse cx="70" cy="58" rx="4" ry="4.5" fill="#fff"/>
+            <circle cx="51" cy="59" r="2.5" fill="#4a2800"/>
+            <circle cx="71" cy="59" r="2.5" fill="#4a2800"/>
+            <circle cx="52" cy="57.5" r="1" fill="#fff"/>
+            <circle cx="72" cy="57.5" r="1" fill="#fff"/>
+            <!-- Eyebrows -->
+            <path d="M45 52 Q50 49 55 52" stroke="#3d1a00" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <path d="M65 52 Q70 49 75 52" stroke="#3d1a00" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <!-- Nose -->
+            <path d="M58 62 Q60 66 62 62" stroke="#c97a50" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+            <!-- Smile -->
+            <path d="M52 72 Q60 78 68 72" stroke="#c97a50" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <!-- Gold earrings -->
+            <circle cx="34" cy="65" r="3" fill="#ffcc00"/>
+            <circle cx="86" cy="65" r="3" fill="#ffcc00"/>
+            <!-- Crown accent -->
+            <path d="M45 36 L52 28 L60 34 L68 28 L75 36" stroke="#ffcc00" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div>
+          <h3 class="font-bold text-base sm:text-lg text-white">Bridget Elaine Lilly</h3>
+          <p class="text-gold text-xs sm:text-sm font-semibold mt-1 font-mono uppercase tracking-wider">Owner & Manager</p>
+          <p class="text-white/50 text-xs mt-3 leading-relaxed">Founder of Prize Nova Entertainment LLC. Dedicated to giving players the best sweepstakes gaming experience in the US.</p>
+        </div>
+        <a href="https://www.facebook.com/bridgetsolilly" target="_blank" rel="noopener noreferrer"
+           style="display:inline-flex;align-items:center;justify-content:center;width:100%;background:#ffcc00;color:#1a0033;font-weight:900;font-size:12px;padding:10px 20px;border-radius:999px;text-decoration:none;letter-spacing:.03em;">
+          ➕ Add Me as Friend on Facebook
+        </a>
+      </div>
+
+      <!-- Fabrizio — QA -->
+      <div class="rounded-3xl bg-panel/60 border border-white/10 p-6 sm:p-7 flex flex-col items-center text-center gap-4 hover:border-gold/40 transition-colors">
+        <div style="width:96px;height:96px;border-radius:50%;overflow:hidden;border:4px solid rgba(255,255,255,.2);flex-shrink:0;display:block;">
+          <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;display:block;">
+            <defs>
+              <radialGradient id="bg2" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#0d2a4a"/>
+                <stop offset="100%" stop-color="#061520"/>
+              </radialGradient>
+              <radialGradient id="skin2" cx="50%" cy="40%" r="60%">
+                <stop offset="0%" stop-color="#d4a574"/>
+                <stop offset="100%" stop-color="#b8865a"/>
+              </radialGradient>
+            </defs>
+            <rect width="120" height="120" fill="url(#bg2)"/>
+            <ellipse cx="60" cy="108" rx="38" ry="22" fill="#0a1f35"/>
+            <!-- Shirt/collar -->
+            <path d="M22 108 Q40 85 60 88 Q80 85 98 108 Z" fill="#1a3a5c"/>
+            <path d="M52 88 L60 95 L68 88" fill="#fff" opacity="0.9"/>
+            <rect x="52" y="75" width="16" height="16" rx="5" fill="url(#skin2)"/>
+            <ellipse cx="60" cy="57" rx="25" ry="27" fill="url(#skin2)"/>
+            <!-- Short dark hair -->
+            <ellipse cx="60" cy="38" rx="25" ry="14" fill="#1a0a00"/>
+            <rect x="35" y="38" width="50" height="10" rx="3" fill="#1a0a00"/>
+            <!-- Eyes -->
+            <ellipse cx="50" cy="57" rx="4" ry="4" fill="#fff"/>
+            <ellipse cx="70" cy="57" rx="4" ry="4" fill="#fff"/>
+            <circle cx="51" cy="58" r="2.5" fill="#2a1800"/>
+            <circle cx="71" cy="58" r="2.5" fill="#2a1800"/>
+            <circle cx="52" cy="56.5" r="1" fill="#fff"/>
+            <circle cx="72" cy="56.5" r="1" fill="#fff"/>
+            <!-- Eyebrows -->
+            <path d="M45 51 Q50 48 55 51" stroke="#1a0a00" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+            <path d="M65 51 Q70 48 75 51" stroke="#1a0a00" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+            <!-- Nose -->
+            <path d="M57 62 Q60 67 63 62" stroke="#9a6540" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+            <!-- Beard/stubble -->
+            <path d="M44 72 Q60 82 76 72" stroke="#3a1a00" stroke-width="7" fill="none" stroke-linecap="round" opacity="0.6"/>
+            <path d="M50 73 Q60 80 70 73" stroke="#3a1a00" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.8"/>
+            <!-- Glasses -->
+            <rect x="43" y="53" width="14" height="10" rx="4" fill="none" stroke="#ffcc00" stroke-width="1.5"/>
+            <rect x="63" y="53" width="14" height="10" rx="4" fill="none" stroke="#ffcc00" stroke-width="1.5"/>
+            <line x1="57" y1="58" x2="63" y2="58" stroke="#ffcc00" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <div>
+          <h3 class="font-bold text-base sm:text-lg text-white">Fabrizio Davis</h3>
+          <p class="text-gold text-xs sm:text-sm font-semibold mt-1 font-mono uppercase tracking-wider">Quality Assurance</p>
+          <p class="text-white/50 text-xs mt-3 leading-relaxed">Ensures every platform, payout, and player interaction meets Prize Nova's high standards before it reaches you.</p>
+        </div>
+        <div class="flex items-center gap-2 text-white/30 text-xs mt-auto">
+          <svg viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4 shrink-0"><path d="M9 12l2 2 4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/></svg>
+          Quality Verified
+        </div>
+      </div>
+
+      <!-- Jeremy — Customer Satisfaction -->
+      <div class="rounded-3xl bg-panel/60 border border-white/10 p-6 sm:p-7 flex flex-col items-center text-center gap-4 hover:border-gold/40 transition-colors">
+        <div style="width:96px;height:96px;border-radius:50%;overflow:hidden;border:4px solid rgba(255,255,255,.2);flex-shrink:0;display:block;">
+          <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;display:block;">
+            <defs>
+              <radialGradient id="bg3" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#1a2800"/>
+                <stop offset="100%" stop-color="#0d1500"/>
+              </radialGradient>
+              <radialGradient id="skin3" cx="50%" cy="40%" r="60%">
+                <stop offset="0%" stop-color="#8B5E3C"/>
+                <stop offset="100%" stop-color="#6B4423"/>
+              </radialGradient>
+            </defs>
+            <rect width="120" height="120" fill="url(#bg3)"/>
+            <ellipse cx="60" cy="108" rx="38" ry="22" fill="#142000"/>
+            <!-- Shirt -->
+            <path d="M22 108 Q40 85 60 88 Q80 85 98 108 Z" fill="#1e3a10"/>
+            <rect x="52" y="74" width="16" height="17" rx="5" fill="url(#skin3)"/>
+            <ellipse cx="60" cy="57" rx="25" ry="27" fill="url(#skin3)"/>
+            <!-- Hair — short natural afro -->
+            <ellipse cx="60" cy="40" rx="28" ry="20" fill="#1a0800"/>
+            <ellipse cx="60" cy="36" rx="25" ry="16" fill="#2a1000"/>
+            <!-- Texture dots -->
+            <circle cx="50" cy="35" r="3" fill="#1a0800"/><circle cx="60" cy="32" r="3" fill="#1a0800"/>
+            <circle cx="70" cy="35" r="3" fill="#1a0800"/><circle cx="55" cy="30" r="2" fill="#1a0800"/>
+            <circle cx="65" cy="30" r="2" fill="#1a0800"/>
+            <!-- Eyes -->
+            <ellipse cx="50" cy="57" rx="4" ry="4" fill="#fff"/>
+            <ellipse cx="70" cy="57" rx="4" ry="4" fill="#fff"/>
+            <circle cx="51" cy="58" r="2.5" fill="#1a0800"/>
+            <circle cx="71" cy="58" r="2.5" fill="#1a0800"/>
+            <circle cx="52" cy="56.5" r="1" fill="#fff"/>
+            <circle cx="72" cy="56.5" r="1" fill="#fff"/>
+            <!-- Eyebrows -->
+            <path d="M45 51 Q50 48 55 51" stroke="#1a0800" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+            <path d="M65 51 Q70 48 75 51" stroke="#1a0800" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+            <!-- Nose -->
+            <ellipse cx="60" cy="66" rx="4" ry="2.5" fill="#5a3515" opacity="0.7"/>
+            <!-- Wide friendly smile -->
+            <path d="M48 72 Q60 83 72 72" stroke="#3a1a00" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+            <path d="M50 73 Q60 82 70 73" fill="#c97a50" opacity="0.4"/>
+            <!-- Teeth -->
+            <path d="M52 74 Q60 80 68 74" fill="#fff" opacity="0.85"/>
+            <!-- Headset -->
+            <path d="M35 55 Q35 35 60 35 Q85 35 85 55" stroke="#ffcc00" stroke-width="3" fill="none"/>
+            <rect x="31" y="53" width="8" height="12" rx="3" fill="#ffcc00"/>
+            <rect x="81" y="53" width="8" height="12" rx="3" fill="#ffcc00"/>
+          </svg>
+        </div>
+        <div>
+          <h3 class="font-bold text-base sm:text-lg text-white">Jeremy</h3>
+          <p class="text-gold text-xs sm:text-sm font-semibold mt-1 font-mono uppercase tracking-wider">Customer Satisfaction Manager</p>
+          <p class="text-white/50 text-xs mt-3 leading-relaxed">Your go-to for resolving issues fast. Jeremy makes sure every player leaves happy — every single time.</p>
+        </div>
+        <div class="flex items-center gap-2 text-white/30 text-xs mt-auto">
+          <svg viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4 shrink-0"><path d="M4.318 6.318a4.5 4.5 0 0 0 0 6.364L12 20.364l7.682-7.682a4.5 4.5 0 0 0-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 0 0-6.364 0z"/></svg>
+          Customer First
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Final CTA -->
+<section class="section-pad px-5 sm:px-8 lg:px-10 text-center relative overflow-hidden">
+  <div class="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gold/10 rounded-full blur-[120px]"></div>
+  <div class="relative max-w-2xl mx-auto">
+    <h2 class="font-display text-4xl sm:text-6xl tracking-wide text-glow mb-5">READY TO PLAY?</h2>
+    <p class="text-white/65 text-base sm:text-lg mb-8">Message us on Facebook — our team will have your account set up and your bonus loaded within minutes.</p>
+    <a href="https://www.facebook.com/PrizeNova" target="_blank" rel="noopener noreferrer"
+       class="glow-cta inline-flex items-center justify-center gap-3 bg-gold hover:bg-hotgold text-void font-display text-2xl tracking-wide px-10 py-4 rounded-full transition-all hover:scale-105 active:scale-95">
+      <span data-icon="facebook" data-size="md" class="text-void"></span> CLAIM FREE BONUS
+    </a>
+  </div>
+</section>
+
+</main>
+
+<!-- ══════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════ -->
+<footer class="border-t border-gold/15 px-5 sm:px-8 lg:px-10 pt-14 sm:pt-16 pb-8" style="background:#0a0014;">
+  <div class="max-w-7xl mx-auto">
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 sm:gap-12 pb-10 border-b border-white/10">
+      <div>
+        <div class="flex items-center gap-1 mb-4">
+          <span class="text-2xl font-display tracking-wide text-gold text-glow">PRIZE</span>
+          <span class="text-2xl font-display tracking-wide text-white">NOVA</span>
+        </div>
+        <p class="text-white/50 text-sm leading-relaxed">
+          Prize Nova is operated by <span class="text-white/70 font-semibold">Prize Nova Entertainment LLC</span>, registered under international gaming and sweepstakes compliance regulations.
+        </p>
+        <div class="flex items-center gap-3 mt-5">
+          <a href="https://www.facebook.com/PrizeNova" target="_blank" rel="noopener noreferrer"
+             aria-label="Prize Nova on Facebook"
+             class="w-11 h-11 rounded-full bg-panel border border-gold/25 flex items-center justify-center hover:bg-gold hover:text-void transition-colors text-gold">
+            <span data-icon="facebook" data-size="md"></span>
+          </a>
+          <a href="https://www.facebook.com/PrizeNova" target="_blank" rel="noopener noreferrer"
+             aria-label="Message Prize Nova"
+             class="w-11 h-11 rounded-full bg-panel border border-gold/25 flex items-center justify-center hover:bg-gold hover:text-void transition-colors text-gold">
+            <span data-icon="messenger" data-size="md"></span>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="font-bold text-sm uppercase tracking-wider text-white/75 mb-4">Explore</h4>
+        <ul class="space-y-2.5 text-sm text-white/50">
+          <li><a href="#games"   class="hover:text-gold transition-colors">Game Platforms</a></li>
+          <li><a href="#bonuses" class="hover:text-gold transition-colors">Bonuses &amp; Promotions</a></li>
+          <li><a href="#banking" class="hover:text-gold transition-colors">Banking &amp; Payouts</a></li>
+          <li><a href="#faq"     class="hover:text-gold transition-colors">FAQ</a></li>
+          <li><a href="#caesars" class="transition-colors" style="color:rgba(201,168,76,.7)">Caesars VIP Lounge</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-bold text-sm uppercase tracking-wider text-white/75 mb-4">Support</h4>
+        <ul class="space-y-2.5 text-sm text-white/50">
+          <li>
+            <a href="https://www.facebook.com/PrizeNova" target="_blank" rel="noopener noreferrer"
+               class="hover:text-gold transition-colors flex items-center gap-2">
+              <span data-icon="messenger" data-size="sm"></span> Message us on Facebook
+            </a>
+          </li>
+          <li class="text-white/35">Available 24/7</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="py-8 sm:py-10 space-y-4">
+      <div class="flex items-start gap-3">
+        <span data-icon="warn" data-size="md" class="text-gold mt-0.5 shrink-0"></span>
+        <h5 class="font-bold text-sm sm:text-base text-white/75">Important Disclaimer</h5>
+      </div>
+      <p class="text-[11px] sm:text-xs text-white/40 leading-relaxed">
+        Players must be 18 years of age or older to participate, or 21+ in states where required by law. Prize Nova is intended for amusement and sweepstakes promotion tracking purposes only. No purchase is necessary to enter or win. Void where prohibited. All bonuses and promotions are subject to additional terms available upon request.
+      </p>
+      <p class="text-[11px] sm:text-xs text-white/40 leading-relaxed">
+        This platform is not affiliated with, endorsed by, or sponsored by Apple Inc. or Google LLC. All trademarks and platform names referenced are property of their respective owners.
+      </p>
+      <div class="rounded-xl border border-white/10 bg-white/5 px-4 py-3 flex items-center gap-3">
+        <span data-icon="phone" data-size="sm" class="text-gold shrink-0"></span>
+        <p class="text-[11px] sm:text-xs text-white/55 leading-relaxed font-medium">
+          Gambling problem? Call <span class="text-white/80 font-bold">1-800-GAMBLER</span> for free, confidential support.
+        </p>
+      </div>
+    </div>
+
+    <div class="pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] sm:text-xs text-white/30">
+      <p>&copy; 2026 Prize Nova Entertainment LLC. All rights reserved.</p>
+      <p>Made for amusement. Play responsibly.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ══════════════════════════════════════════
+     FLASHING LIVE CHAT BANNER (top of page)
+══════════════════════════════════════════ -->
+<style>
+  @keyframes bannerFlash {
+    0%,100% { background: #ffcc00; }
+    50%      { background: #fff000; box-shadow: 0 0 14px 3px rgba(255,240,0,.5); }
+  }
+  #liveChatBanner {
+    animation: bannerFlash 1.4s ease-in-out infinite;
+    min-height: 36px;
+    padding: 6px 12px;
+    box-shadow: 0 3px 12px rgba(0,0,0,.5);
+  }
+  @media(min-width:640px){ #liveChatBanner { min-height: 40px; padding: 8px 16px; } }
+
+  /* Hovering live chat widget */
+  #liveChatWidget {
+    transition: transform .3s ease, opacity .3s ease;
+    transform: translateY(16px);
+    opacity: 0;
+    pointer-events: none;
+  }
+  #liveChatWidget.open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  @keyframes chatPing {
+    0%       { transform: scale(1);   opacity: .6; }
+    75%,100% { transform: scale(2.2); opacity: 0;  }
+  }
+  .chat-ping { animation: chatPing 1.8s cubic-bezier(0,0,.2,1) infinite; }
+</style>
+
+<!-- Flashing banner — slim fixed bar below nav, clicks open LIVE CHAT only -->
+<div id="liveChatBanner"
+     class="fixed inset-x-0 flex items-center justify-center px-8 cursor-pointer select-none"
+     style="top:64px; z-index:75;"
+     onclick="toggleLiveChat()"
+     role="button"
+     aria-label="Open live chat">
+  <style>@media(min-width:640px){#liveChatBanner{top:80px;}}</style>
+  <p style="color:#1a0033;font-weight:900;font-size:12px;text-align:center;line-height:1.3;max-width:600px;margin:0 auto;">⚠️ Having an issue while texting on our page? <span style="text-decoration:underline;">Click here to chat live on our website</span> →</p>
+</div>
+
+<!-- ══════════════════════════════════════════
+     FLOATING MESSENGER LEFT — opens live chat widget
+══════════════════════════════════════════ -->
+<!-- Messenger button LEFT — opens live chat popup -->
+<div style="position:fixed; bottom:24px; left:16px; z-index:66; display:flex; flex-direction:column; align-items:flex-start; gap:8px;">
+  <!-- Popup label above button -->
+  <div id="chatTooltip" style="opacity:0; transition:opacity .3s ease; pointer-events:none; background:rgba(10,0,20,.97); border:1px solid rgba(255,204,0,.5); border-radius:10px; padding:7px 11px; white-space:nowrap;">
+    <p style="color:#ffcc00; font-weight:800; font-size:12px; margin:0;">I want Free Play 🎮</p>
+  </div>
+  <button onclick="toggleLiveChat()" aria-label="I want free play — open live chat"
+          style="position:relative; width:56px; height:56px; border-radius:50%; background:#ffcc00; border:none; cursor:pointer; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 24px rgba(255,204,0,.5); flex-shrink:0;">
+    <span style="position:absolute; inset:0; border-radius:50%; background:rgba(255,204,0,.5); animation:chatPing 1.8s cubic-bezier(0,0,.2,1) infinite;"></span>
+    <!-- Messenger icon -->
+    <svg viewBox="0 0 24 24" fill="#1a0033" style="width:28px;height:28px;position:relative;z-index:1;" aria-hidden="true">
+      <path d="M12 2C6.477 2 2 6.145 2 11.243c0 2.908 1.438 5.504 3.686 7.2V22l3.37-1.85c.9.25 1.854.384 2.844.384 5.523 0 10-4.145 10-9.243S17.523 2 12 2zm1.043 12.448l-2.55-2.72-4.976 2.72 5.474-5.808 2.613 2.72 4.913-2.72-5.474 5.808z"/>
+    </svg>
+  </button>
+</div>
+
+<!-- ══════════════════════════════════════════
+     LIVE CHAT POPUP WIDGET (above left button)
+══════════════════════════════════════════ -->
+<div id="liveChatWidget"
+     style="position:fixed; bottom:90px; left:16px; width:calc(100vw - 32px); max-width:320px; z-index:65; border:2px solid rgba(255,204,0,.35); border-radius:16px; overflow:hidden; background:#0a0014; box-shadow:0 8px 40px rgba(0,0,0,.6); opacity:0; transform:translateY(12px); pointer-events:none; transition:opacity .3s ease, transform .3s ease;"
+     aria-live="polite">
+  <!-- Header -->
+  <div style="display:flex; align-items:center; justify-content:space-between; padding:12px 14px; background:linear-gradient(135deg,#2d0a5e,#1a0033);">
+    <div style="display:flex; align-items:center; gap:10px;">
+      <div style="position:relative; width:34px; height:34px; border-radius:50%; background:#ffcc00; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+        <svg viewBox="0 0 24 24" fill="#1a0033" style="width:18px;height:18px;"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        <span style="position:absolute; bottom:-2px; right:-2px; width:10px; height:10px; border-radius:50%; background:#4ade80; border:2px solid #1a0033;"></span>
+      </div>
+      <div>
+        <p style="font-weight:700; font-size:13px; color:#fff; margin:0; line-height:1;">Prize Nova Support</p>
+        <p style="font-size:10px; color:#4ade80; margin:2px 0 0; font-weight:500;">● Online now — 24/7</p>
+      </div>
+    </div>
+    <button onclick="toggleLiveChat()" aria-label="Close" style="background:none; border:none; cursor:pointer; color:rgba(255,255,255,.5); padding:4px; line-height:1;">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" style="width:18px;height:18px;">
+        <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+    </button>
+  </div>
+  <!-- Body -->
+  <div style="height:300px; background:#0f0020; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:14px; padding:20px; text-align:center;">
+    <div style="width:48px; height:48px; border-radius:50%; background:#2d0a5e; display:flex; align-items:center; justify-content:center;">
+      <svg viewBox="0 0 24 24" fill="#ffcc00" style="width:24px;height:24px;"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+    </div>
+    <div>
+      <p style="color:#fff; font-weight:700; font-size:13px; margin:0 0 6px;">Live Chat — We're Here 24/7</p>
+      <p style="color:rgba(255,255,255,.5); font-size:11px; margin:0; line-height:1.5;">Add your Tawk.to script to activate<br>real-time chat on this widget.</p>
     </div>
     <a href="https://www.facebook.com/PrizeNova" target="_blank" rel="noopener noreferrer"
        style="display:inline-flex; align-items:center; gap:6px; background:#ffcc00; color:#1a0033; font-weight:800; font-size:11px; padding:8px 16px; border-radius:999px; text-decoration:none;">
@@ -22,18 +1058,15 @@ var ICONS = {
   </div>
 </div>
 
-<!-- Toggle JS — only live chat widget, NOT messenger -->
 <script>
   var chatOpen = false;
   function toggleLiveChat() {
     chatOpen = !chatOpen;
-    var w   = document.getElementById('liveChatWidget');
-    var dot = document.getElementById('chatUnreadDot');
+    var w = document.getElementById('liveChatWidget');
     if (chatOpen) {
       w.style.opacity = '1';
       w.style.transform = 'translateY(0)';
       w.style.pointerEvents = 'auto';
-      if (dot) dot.style.display = 'none';
       if (window.Tawk_API && window.Tawk_API.maximize) window.Tawk_API.maximize();
     } else {
       w.style.opacity = '0';
@@ -42,12 +1075,14 @@ var ICONS = {
       if (window.Tawk_API && window.Tawk_API.minimize) window.Tawk_API.minimize();
     }
   }
-  // Auto-show tooltip after 6s
+  // Auto-show "I want Free Play" tooltip after 5s
   setTimeout(function () {
     var t = document.getElementById('chatTooltip');
-    if (t) { t.style.opacity = '1'; }
-    setTimeout(function () { if (t && !chatOpen) t.style.opacity = '0'; }, 4000);
-  }, 6000);
+    if (t) {
+      t.style.opacity = '1';
+      setTimeout(function () { if (!chatOpen) t.style.opacity = '0'; }, 4000);
+    }
+  }, 5000);
 </script>
 
 <!--Start of Tawk.to Script-->
@@ -266,6 +1301,40 @@ s0.parentNode.insertBefore(s1,s0);
   setTimeout(showAlert, 2500);
 })();
 </script>
+
+<!-- ══════════════════════════════════════════
+     BRIDGET UPDATE POPUP — shows on page load
+══════════════════════════════════════════ -->
+<div id="bridgetPopup" style="position:fixed;inset:0;z-index:999;display:flex;align-items:center;justify-content:center;padding:16px;background:rgba(0,0,0,.75);backdrop-filter:blur(6px);">
+  <div style="background:linear-gradient(160deg,#2d0a5e,#1a0033);border:2px solid rgba(255,204,0,.4);border-radius:20px;max-width:420px;width:100%;padding:28px 24px;box-shadow:0 20px 60px rgba(0,0,0,.8);position:relative;">
+    <!-- Close X -->
+    <button onclick="document.getElementById('bridgetPopup').style.display='none'" aria-label="Close"
+            style="position:absolute;top:14px;right:14px;background:rgba(255,255,255,.1);border:none;border-radius:50%;width:30px;height:30px;cursor:pointer;color:#fff;font-size:16px;line-height:1;display:flex;align-items:center;justify-content:center;">✕</button>
+    <!-- Icon -->
+    <div style="font-size:28px;text-align:center;margin-bottom:12px;">📢</div>
+    <!-- Title -->
+    <h3 style="color:#ffcc00;font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:.05em;text-align:center;margin:0 0 6px;">Important Update</h3>
+    <p style="color:rgba(245,230,200,.9);font-size:13px;font-weight:700;text-align:center;margin:0 0 16px;letter-spacing:.02em;">New Facebook Profile for Bridget</p>
+    <!-- Divider -->
+    <div style="height:1px;background:linear-gradient(90deg,transparent,rgba(255,204,0,.4),transparent);margin-bottom:16px;"></div>
+    <!-- Body text -->
+    <p style="color:rgba(255,255,255,.8);font-size:12px;line-height:1.7;margin:0 0 20px;text-align:center;">
+      Attention Prize Nova Players,<br><br>
+      Please be aware that our manager <strong style="color:#ffcc00;">Bridget's</strong> previous Facebook profile has been unexpectedly disabled. To ensure you don't face any disruptions in communication, support, or updates, Bridget has set up a new official profile.<br><br>
+      <strong style="color:#fff;">Please add her new account immediately</strong> using the button below to stay connected.
+    </p>
+    <!-- CTA Button -->
+    <a href="https://www.facebook.com/bridgetsolilly" target="_blank" rel="noopener noreferrer"
+       style="display:block;text-align:center;background:#ffcc00;color:#1a0033;font-weight:900;font-size:13px;padding:13px 20px;border-radius:999px;text-decoration:none;margin-bottom:10px;box-shadow:0 0 16px rgba(255,204,0,.4);">
+      ➕ Add Bridget's New Facebook Profile
+    </a>
+    <!-- Close button -->
+    <button onclick="document.getElementById('bridgetPopup').style.display='none'"
+            style="display:block;width:100%;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.6);font-size:12px;padding:10px;border-radius:999px;cursor:pointer;">
+      Close — I'll do this later
+    </button>
+  </div>
+</div>
 
 </body>
 </html>
