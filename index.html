@@ -998,32 +998,6 @@ document.addEventListener('DOMContentLoaded', function () {
   <p style="color:#1a0033;font-weight:900;font-size:12px;text-align:center;line-height:1.3;max-width:600px;margin:0 auto;">⚠️ Having an issue while texting on our page? <span style="text-decoration:underline;">Click here to chat live on our website</span> →</p>
 </div>
 
-<!-- ══════════════════════════════════════════
-     FLOATING MESSENGER LEFT — opens live chat widget
-══════════════════════════════════════════ -->
-<!-- Messenger button LEFT — opens live chat popup -->
-<div style="position:fixed; bottom:24px; left:16px; z-index:66; display:flex; flex-direction:column; align-items:flex-start; gap:8px;">
-  <!-- Popup label above button -->
-  <div id="chatTooltip" style="opacity:0; transition:opacity .3s ease; pointer-events:none; background:rgba(10,0,20,.97); border:1px solid rgba(255,204,0,.5); border-radius:10px; padding:7px 11px; white-space:nowrap;">
-    <p style="color:#ffcc00; font-weight:800; font-size:12px; margin:0;">I want Free Play 🎮</p>
-  </div>
-  <button onclick="toggleLiveChat()" aria-label="I want free play — open live chat"
-          style="position:relative; width:56px; height:56px; border-radius:50%; background:#ffcc00; border:none; cursor:pointer; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 24px rgba(255,204,0,.5); flex-shrink:0;">
-    <span style="position:absolute; inset:0; border-radius:50%; background:rgba(255,204,0,.5); animation:chatPing 1.8s cubic-bezier(0,0,.2,1) infinite;"></span>
-    <!-- Messenger icon -->
-    <svg viewBox="0 0 24 24" fill="#1a0033" style="width:28px;height:28px;position:relative;z-index:1;" aria-hidden="true">
-      <path d="M12 2C6.477 2 2 6.145 2 11.243c0 2.908 1.438 5.504 3.686 7.2V22l3.37-1.85c.9.25 1.854.384 2.844.384 5.523 0 10-4.145 10-9.243S17.523 2 12 2zm1.043 12.448l-2.55-2.72-4.976 2.72 5.474-5.808 2.613 2.72 4.913-2.72-5.474 5.808z"/>
-    </svg>
-  </button>
-</div>
-    </div>
-    <a href="https://www.facebook.com/PrizeNova" target="_blank" rel="noopener noreferrer"
-       style="display:inline-flex; align-items:center; gap:6px; background:#ffcc00; color:#1a0033; font-weight:800; font-size:11px; padding:8px 16px; border-radius:999px; text-decoration:none;">
-      <svg viewBox="0 0 24 24" fill="currentColor" style="width:14px;height:14px;flex-shrink:0;"><path d="M12 2C6.477 2 2 6.145 2 11.243c0 2.908 1.438 5.504 3.686 7.2V22l3.37-1.85c.9.25 1.854.384 2.844.384 5.523 0 10-4.145 10-9.243S17.523 2 12 2zm1.043 12.448l-2.55-2.72-4.976 2.72 5.474-5.808 2.613 2.72 4.913-2.72-5.474 5.808z"/></svg>
-      Message on Facebook instead
-    </a>
-  </div>
-</div>
 
 <script>
   var chatOpen = false;
